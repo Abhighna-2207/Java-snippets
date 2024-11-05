@@ -1,19 +1,20 @@
-# Color Chaser Game
+# Falling Blocks Game
 
-Color Chaser is a fun and interactive game where players must click on a moving target that changes colors. The goal is to click the target as many times as possible within a given time limit. This implementation is done using Java Swing for a simple graphical user interface.
+## Overview
+
+Falling Blocks is a simple yet engaging Java-based game developed using Java Swing. The objective of the game is to control a player character and avoid falling blocks while trying to achieve the highest score possible. The game features dynamic gameplay with increasing difficulty, providing an exciting challenge for players.
 
 ## Features
 
-- Moving target that changes colors randomly.
-- Timer to limit the duration of the game.
-- Score tracking to count the number of successful clicks.
-- Simple and engaging gameplay for all ages.
+- **Interactive Gameplay**: Move the player character left or right using keyboard controls to dodge falling blocks.
+- **Scoring System**: Earn points for every block avoided; score increases over time.
+- **Dynamic Difficulty**: The speed of falling blocks increases as the player's score rises, enhancing the challenge.
+- **Game Over Mechanism**: The game ends when the player collides with a falling block, displaying the final score.
 
-## Getting Started
+## Technologies Used
 
-### Prerequisites
-
-- Java Development Kit (JDK) installed on your machine.
-- An IDE (like IntelliJ IDEA, Eclipse, or NetBeans) to run the code.
+- Java
+- Java Swing (for GUI)
+- Object-Oriented Programming (OOP) principles
 
 
