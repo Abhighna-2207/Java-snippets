@@ -1,0 +1,397 @@
+//1
+import java.util.*;
+
+class PosiNegZero{
+	public static void main (String args[]){
+		Scanner s=new Scanner(System.in);
+		Integer num=s.nextInt();
+		if (num>0) {
+			System.out.printf("The number %d is Positive",num);
+        }
+		else if (num==0) {
+			System.out.printf("The number %d is Zero",num);
+        }
+		else {
+			System.out.printf("The number %d is Negative",num);
+        }
+	}
+}
+
+import java.util.*;
+
+class LastDigit{
+    public static void main (String args[]){
+        Scanner s=new Scanner(System.in);
+        Integer a=s.nextInt();
+        int b=s.nextInt();
+        int x=a%10;
+        int y=b%10;
+        if (x==y) {
+            System.out.println("True");
+        }
+        else {
+            System.out.println("False");
+        }
+    }
+}
+
+//2
+import java.util.*;
+
+class OddEven{
+    public static void main(String args[]){
+        Scanner s=new Scanner(System.in);
+        int num=s.nextInt();
+        if (num%2==0) {
+            System.out.printf("The number %d is Even",num);
+        }
+        else{
+            System.out.printf("The number %d is Odd",num);
+        }
+    }
+}
+
+//3
+
+import java.lang.*;
+
+class CommandLine{
+    public static void main(String args[]){
+        int i;
+        if (args.length>0){
+            for (i=0;i<args.length-1;i++){
+                System.out.printf(args[i]+", ");
+            }
+            System.out.printf(args[i]);
+        }
+        else{
+            System.out.printf("No command line values");
+        }
+    }
+}
+
+//4
+import java.util.*;
+import java.lang.*;
+
+class CharSort{
+    public static void main(String args[]){
+        Scanner s=new Scanner(System.in);
+        char a=s.next().charAt(0);
+        char b=s.next().charAt(0);
+        if (a>b){
+            System.out.printf(b+","+a);
+        }
+        else{
+            System.out.printf(a+","+b);
+        }
+    }
+}
+
+//5
+import java.util.*;
+
+class IsAlphaNum{
+    public static void main (String args[]){
+        Scanner s=new Scanner(System.in);
+        char a=s.next().charAt(0);
+        if ((a>='a' && a<='z') || (a>='A' && a<='Z')){
+            System.out.println("Alphabet");
+        }
+        else if (a>='0' && a<='9') {
+            System.out.println("Numeric");
+        }
+        else{
+            System.out.println("Special Character");
+        }
+    }
+}
+
+//6
+import java.util.*;
+
+class InterestPercent{
+    public static void main(String args[]){
+        Scanner s=new Scanner(System.in);
+        System.out.print("Enter Gender Male or Female: ");
+        String gen=s.nextLine();
+        System.out.print("Enter Age: ");
+        int a=s.nextInt();
+        if (gen.equals("Female")){
+            if (a>0 && a<59){
+                System.out.print("the percentage of interest is 8.2%");
+            }
+            else if (a>58 && a<101){
+                System.out.print("the percentage of interest is 9.2%");
+            }
+            else {
+                System.out.print("enter the age value between 1 to 100");
+            }
+        }
+        else if (gen.equals("Male")){
+            if (a>0 && a<59){
+                System.out.print("the percentage of interest is 8.4%");
+            }
+            else if (a>58 && a<101){
+                System.out.print("the percentage of interest is 10.5%");
+            }
+            else {
+                System.out.print("enter the age value between 1 to 100");
+            }
+        }
+        else{
+            System.out.println("Enter the values in proper format");
+        }
+    }
+}
+
+//7
+import java.util.*;
+import java.lang.*;
+
+class UpperLowerCase{
+    public static void main(String args[]){
+        Scanner s=new Scanner(System.in);
+        char a=s.next().charAt(0);
+        if (a>='a' && a<='z'){
+            int b=(int) a -32;
+            System.out.printf("%c -> %c",a,(char)b);
+        }
+        else if (a>='A' && a<='Z'){
+            int b=(int) a +32;
+            System.out.printf("%c -> %c",a,(char)b);
+        }
+        else{
+            System.out.printf("Give proper input");
+        }
+    }
+}
+
+
+//8
+import java.util.*;
+import java.lang.*;
+
+class ColorCode{
+    public static void main(String args[]){
+        Scanner s=new Scanner(System.in);
+        char a=s.next().charAt(0);
+        switch (a){
+            case 'R':
+                System.out.print("Red");
+                break;
+            case 'B':
+                System.out.print("Blue");
+                break;
+            case 'G':
+                System.out.print("Green");
+                break;
+            case 'O':
+                System.out.print("Orange");
+                break;
+            case 'W':
+                System.out.print("White");
+                break;
+            case 'Y':
+                System.out.print("Yellow");
+                break;
+            default:
+                System.out.print("Invalid Code");
+        }
+    }
+}
+
+
+//9
+
+import java.lang.*;
+
+class MonthName{
+    public static void main(String args[]){
+        if (args.length>0) {
+            
+        String a=args[0];
+        switch (a){
+            case "1":
+                System.out.print("January");
+                break;
+            case "2":
+                System.out.print("February");
+                break;
+            case "3":
+                System.out.print("March");
+                break;
+            case "4":
+                System.out.print("April");
+                break;
+            case "5":
+                System.out.print("May");
+                break;
+            case "6":
+                System.out.print("June");
+                break;
+            case "7":
+                System.out.print("July");
+                break;
+            case "8":
+                System.out.print("August");
+                break;
+            case "9":
+                System.out.print("September");
+                break;
+            case "10":
+                System.out.print("October");
+                break;
+            case "11":
+                System.out.print("November");
+                break;
+            case "12":
+                System.out.print("December");
+                break;
+            default:
+                System.out.print("Invalid");
+        }
+        }
+        else{
+            System.out.print("Please enter the month in numbers");
+        }
+
+    }
+}
+
+//10
+class OneToTen{
+    public static void main(String args[]){
+        for (int i=1; i<11; i++){
+            System.out.printf(i+"   ");
+        }
+    }
+}
+
+//11
+class EvenNumbers{
+    public static void main(String args[]){
+        for (int i=23; i<57; i++){
+            if (i%2==0){
+                System.out.printf(i+"\n");
+            }
+        }
+    }
+}
+
+//12
+import java.util.*;
+
+
+class PrimeNumber{
+    public static void main(String args[]){
+        Scanner s=new Scanner(System.in);
+        int num=s.nextInt();
+        int flag=0;
+        for (int i=2; i<num; i++){
+            if (num%i==0){
+                flag=1;
+                break;
+            }
+        }
+        if (flag==0){
+            System.out.printf("%d is a Prime Number",num);
+        }
+        else {
+            System.out.printf("%d is not a Prime Number",num);
+        }
+    }
+}
+
+//13
+
+class PrimeInRange{
+    public static void main(String args[]){
+        for (int num=10; num<99; num++){
+            int flag=0;
+            for (int i=2; i<num; i++){
+                if (num%i==0){
+                    flag=1;
+                    break;
+                }
+            }
+            if (flag==0){
+                System.out.print(num+" ");
+            }
+        }
+    }
+}
+
+
+//14
+import java.util.*;
+
+class SumofDigits{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();
+        int s=0;
+        int rem;
+        while (num>0){
+            rem=num%10;
+            s=s+rem;
+            num=num/10;
+        }
+        System.out.print(s);
+    }
+}
+
+//15
+import java.lang.*;
+class FloydFormat{
+    public static void main(String args[]){
+        if (args.length==0){
+            System.out.print("Please enter integer code");
+        }
+        int n=Integer.parseInt(args[0]);
+        for (int i=1; i<n+1;i++){
+            for (int j=0;j<i;j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+//16
+import java.util.*;
+
+class ReverseNumber{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();
+        int rem,rev=0;
+        while (num>0){
+            rem=num%10;
+            rev=rev*10+rem;
+            num=num/10;
+        }
+        System.out.print(rev);
+    }
+}
+
+//17
+import java.lang.*;
+
+class Palindrome{
+    public static void main(String args[]){
+        int num = Integer.parseInt(args[0]);
+        int n=num;
+        int rem,rev=0;
+        while (num>0){
+            rem=num%10;
+            rev=rev*10+rem;
+            num=num/10;
+        }
+        if (rev==n){
+            System.out.printf("%d is a palindrome",n);
+        }else{
+            System.out.printf("%d is not a palindrome",n);
+        }
+    }
+}

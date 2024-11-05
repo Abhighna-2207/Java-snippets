@@ -1,0 +1,462 @@
+//1
+import java.util.*;
+import java.lang.*;
+
+class SumAverage{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter size of Array: ");
+        int n=sc.nextInt();
+        int[] arr = new int[n];
+        int sum=0;
+        System.out.print("\nEnter Array Elements: ");
+        for (int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+            sum+=arr[i];
+        }
+        float avg= (float) sum/n;
+        System.out.printf("Sum: %d",sum);
+        System.out.printf("\nAverage: %.2f",avg);
+    }
+}
+
+//2
+import java.util.*;
+
+class MaxMin{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter Size of array: ");
+        int n=sc.nextInt();
+        int max=Integer.MIN_VALUE,min=Integer.MAX_VALUE;
+        System.out.print("Enter Elements of array: ");
+        int[] arr=new int[n];
+
+        for (int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+            if (max<arr[i]){
+                max=arr[i];
+            }
+            if (min>arr[i]){
+                min=arr[i];
+            }
+        }
+        System.out.printf("Maximum: %d\n Minimum: %d",max,min);
+
+
+    }
+}
+
+
+//3
+
+import java.util.*;
+
+class FindElement{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter target value: ");
+        int target=sc.nextInt();
+        System.out.print("Enter Size of array: ");
+        int n=sc.nextInt();
+        System.out.print("Enter Elements of array: ");
+        int[] arr=new int[n];
+        int index=-1;
+        for (int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+            if (target==arr[i]){
+                index=i;
+            }
+        }
+        System.out.print(index);
+
+
+    }
+}
+
+//4
+import java.util.*;
+
+
+class IntToAscii{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter size of Array: ");
+        int n=sc.nextInt();
+        int[] arr = new int[n];
+        System.out.print("\nEnter Array Elements: ");
+        for (int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        for (int i=0;i<n;i++){
+            System.out.print(" ");
+            System.out.print((char)arr[i]);
+        }
+    }
+}
+
+//5
+import java.util.*;
+
+class TwoMaxMin{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter Size of array: ");
+        int n=sc.nextInt();
+        int max=Integer.MIN_VALUE,min=Integer.MAX_VALUE;
+        System.out.print("Enter Elements of array: ");
+        int[] arr=new int[n];
+        for (int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+            if (max<arr[i]){
+                max=arr[i];
+            }
+            if (min>arr[i]){
+                min=arr[i];
+            }
+        }
+        int smax=Integer.MIN_VALUE,smin=Integer.MAX_VALU;
+        for (int i=0;i<n;i++){
+            if (smax<arr[i] && arr[i]!=max){
+                smax=arr[i];
+            }
+            if (smin>arr[i] && arr[i]!=min){
+                smin=arr[i];
+            }
+        }
+        System.out.printf("Largest Two Numbers: %d, %d",max,smax);
+        System.out.printf("\nSmallest Two Numbers: %d, %d",min,smin);
+
+
+    }
+}
+
+//6
+
+import java.util.*;
+
+class Sorting{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter Size of array: ");
+        int n=sc.nextInt();
+        System.out.print("Enter Elements of array: ");
+        int[] arr=new int[n];
+        int i,j;
+        for (i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        for (i=0;i<n;i++){
+            for (j=i;j<n;j++){
+                if (arr[i]>arr[j]){
+                    int temp=arr[i];
+                    arr[i]=arr[j];
+                    arr[j]=temp;
+                }
+            }
+        }
+        for (i=0;i<n;i++){
+            System.out.printf("\n%d ",arr[i]);
+        }
+
+
+    }
+}
+
+
+//7
+import java.util.*;
+import java.lang.*;
+
+public class Duplicates {
+    
+    // Define a method to print the elements of an array
+    public static void main(String args[]) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter Size of array: ");
+        int n=sc.nextInt();
+        System.out.print("Enter Elements of array: ");
+        int[] arr=new int[n];
+        for (int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int i, j, k;
+        
+        for (i = 0; i < n; i++) {
+            for (j = i+1; j < n; j++) {
+                if (arr[i] == arr[j]) {
+                    for (k = j; k < n - 1; k++) {
+                        arr[k] = arr[k + 1];
+                    }
+                    n--;
+                    j--;
+                }
+            }
+        }
+        System.out.print("\n");
+        for (i = 0; i < n; i++) {
+            System.out.printf("%d ", arr[i]);
+        }
+    }
+}
+
+//8
+import java.util.*;
+import java.lang.*;
+
+class SumOfNum{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter size of Array: ");
+        int n=sc.nextInt();
+        int[] arr = new int[n];
+        int sum=0;
+        System.out.print("\nEnter Array Elements: ");
+        for (int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+            sum+=arr[i];
+            if (arr[i]==6 || arr[i]==7){
+                sum-=arr[i];
+            }
+        }
+        System.out.printf("Sum: %d",sum);
+    }
+}
+
+//9
+import java.util.*;
+import java.lang.*;
+
+public class ReplaceTens {
+    public static void main(String args[]) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter Size of array: ");
+        int n=sc.nextInt();
+        System.out.print("Enter Elements of array: ");
+        int[] arr=new int[n];
+        for (int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int i=0, j=0,tens=0;
+        int[] narr=new int[n];
+        
+        for (i=0;i<n;i++){
+            if (arr[i]==10){
+                tens+=1;
+            }
+        }
+        for (i=0;i<n;i++){
+            if (arr[i]!=10){
+                narr[j]=arr[i];
+                j++;
+            }
+        }
+        while(j<n){
+            narr[j]=0;
+            j++;
+        }
+        System.out.print("\n");
+        for (i = 0; i < n; i++) {
+            System.out.printf("%d ", narr[i]);
+        }
+    }
+}
+
+//10
+import java.util.*;
+import java.lang.*;
+
+public class EvenOddOrder {
+    public static void main(String args[]) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter Size of array: ");
+        int n=sc.nextInt();
+        System.out.print("Enter Elements of array: ");
+        int[] arr=new int[n];
+        for (int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int i=0, j=0,tens=0;
+        int[] narr=new int[n];
+        for (i=0;i<n;i++){
+            if (arr[i]%2==0){
+                narr[j]=arr[i];
+                j++;
+            }
+        }
+        for (i=0;i<n;i++){
+            if (arr[i]%2!=0){
+                narr[j]=arr[i];
+                j++;
+            }
+        }
+        System.out.print("\n");
+        for (i = 0; i < n; i++) {
+            System.out.printf("%d ", narr[i]);
+        }
+    }
+}
+
+
+//11
+import java.util.*;
+import java.lang.*;
+
+public class Only14 {
+    public static void main(String args[]) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter Size of array: ");
+        int n=sc.nextInt();
+        System.out.print("Enter Elements of array: ");
+        int[] arr=new int[n];
+        for (int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int i,c=0, ones=0,fours=0;
+
+        for (i=0;i<n;i++){
+            if (arr[i]==1){
+                ones+=1;
+            }
+        }
+
+        for (i=0;i<n;i++){
+            if (arr[i]==4){
+                fours+=1;
+            }
+        }
+        if (ones+fours==n){
+            System.out.println("true");
+        }
+        else{
+            System.out.println("false");
+        }
+
+    }
+}
+
+
+
+//12
+import java.util.*;
+import java.lang.*;
+
+public class MiddleWay {
+    public static void main(String args[]) {
+        int i,j;
+
+        Scanner sc=new Scanner(System.in);
+
+        System.out.print("Enter arr1 Elements");
+        int[] arr1=new int[3];
+
+        for ( i=0;i<3;i++){
+            arr1[i]=sc.nextInt();
+        }
+        
+        //Second array
+        int[] arr2=new int[3];
+        System.out.print("Enter arr2 Elements: ");
+
+        for ( i=0;i<3;i++){
+            arr2[i]=sc.nextInt();
+        }
+
+        int[] narr=new int[2];
+        narr[0]=arr1[1];
+        narr[1]=arr2[1];
+
+        System.out.print("\n");
+        for (i = 0; i < 2; i++) {
+            System.out.printf("%d ", narr[i]);
+        }
+    }
+}
+
+
+//13
+import java.util.*;
+import java.lang.*;
+
+public class TwoD {
+    public static void main(String args[]) {
+        int i,j,k=0;
+        if (args.length==4){
+        
+            int[][] arr1=new int[2][2];
+
+            for ( i=0;i<2;i++){
+                for ( j=0 ; j<2 ;j++ ){
+                    arr1[i][j]=Integer.parseInt(args[k]);
+                    k++;
+                }
+            }
+
+            //Printing array
+            System.out.println("The given array is: ");   
+            for ( i=0;i<2;i++){
+                for (j=0;j<2;j++ ){
+                    System.out.printf("%d ",arr1[i][j]);
+                }
+                System.out.println();
+            }
+
+            //Printing Reverse of array
+            System.out.println("The reverse of the array is: ");   
+            for ( i=0;i<2;i++){
+                for ( j=0 ; j<2 ;j++ ){
+                    System.out.printf("%d ",arr1[j][i]);
+                }
+                System.out.println();
+            }
+        }
+        else{
+            System.out.println("Please 4 integer numbers");
+        }
+    }
+}
+
+
+//14
+import java.util.*;
+import java.lang.*;
+
+public class Largest {
+    public static void main(String args[]) {
+        int i,j,k=0,res=Integer.MIN_VALUE;
+        if (args.length==9){
+        
+            int[][] arr1=new int[3][3];
+
+            for ( i=0;i<3;i++){
+                for ( j=0 ; j<3 ;j++ ){
+                    arr1[i][j]=Integer.parseInt(args[k]);
+                    k++;
+                }
+            }
+            
+            //largest number
+            for ( i=0;i<3;i++){
+                for (j=0;j<3;j++ ){
+                    if (arr1[i][j]>res){
+                        res=arr1[i][j];
+                    }
+                }
+            }
+
+            //Printing array
+            System.out.println("The given array is : ");   
+            for ( i=0;i<3;i++){
+                for (j=0;j<3;j++ ){
+                    System.out.printf("%d ",arr1[i][j]);
+                }
+                System.out.println();
+            }
+            System.out.printf("The biggest number in the given array is : %d",res); 
+        }
+        else{
+            System.out.println("Please 9 integer numbers");
+        }
+    }
+}
+
